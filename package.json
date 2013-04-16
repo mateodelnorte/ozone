@@ -1,0 +1,23 @@
+{
+  "name": "ozone",
+  "version": "0.0.0",
+  "description": "A library for scraping ozone / air quality data from http://airquality.weather.gov/probe_aq_data.php",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG= ./node_modules/.bin/mocha -R spec -t 5000"
+  },
+  "dependencies": {
+    "debug": "0.7.2",
+    "jquery": "1.8.3",
+    "lodash": "1.1.1",
+    "request": "2.16.6"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "sinon": "*",
+    "should": "*"
+  },
+  "repository": "",
+  "author": "Matt Walters",
+  "license": "BSD"
+}
