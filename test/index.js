@@ -17,7 +17,7 @@ describe('ozone', function () {
     it('should return data for a latitude and longitude', function (done) {
       ozone.get(latitude, longitude, function (err, res, data) {
         if (err) throw err;
-        // log('res: ' + util.inspect(res));
+        log('res: ' + util.inspect(res));
         log('data: ' + util.inspect(data));
         res.should.not.equal.null;
         data.should.not.equal.null;
