@@ -5,19 +5,19 @@ ozone is a simple wrapper around the NOAA national weather service's publicly ex
 
 How to use it: 
 
-1. Require forecast.io
+Require forecast.io
 
 ```
 var Ozone = require('ozone');
 ```
 
-2. Instantiate an instance of Forecast. You'll need to provide options specifying your forecast.io API Key. 
+Instantiate an instance of Forecast. You'll need to provide options specifying your forecast.io API Key. 
 
 ```
 var ozone = new Ozone();
 ```
 
-3. Make a call to the API using the get or getAtTime methods. 
+Make a call to the API using the get or getAtTime methods. 
 
   The get function calls to the https://api.forecast.io/forecast/APIKEY/LATITUDE,LONGITUDE endpoint. 
 
@@ -27,4 +27,39 @@ ozone.get(latitude, longitude, function (err, res, data) {
   log('res: ' + util.inspect(res));
   log('data: ' + util.inspect(data));
 });
+```
+  Data is returned in an object with a data property, which is an array of objects each containing time, an eight hour average, and a one hour average. All ozone levels are marked in parts per billion. 
+  
+```
+{ data:
+   [ { ozoneEndingTime: 1367429412000,
+       oneHourAverage: '55',
+       eightHourAverage: '44' },
+     { ozoneEndingTime: 1367433012000,
+       oneHourAverage: '59',
+       eightHourAverage: '47' },
+     { ozoneEndingTime: 1367436612000,
+       oneHourAverage: '64',
+       eightHourAverage: '51' },
+     { ozoneEndingTime: 1367440212000,
+       oneHourAverage: '68',
+       eightHourAverage: '55' },
+     { ozoneEndingTime: 1367443812000,
+       oneHourAverage: '72',
+       eightHourAverage: '59' },
+     { ozoneEndingTime: 1367447412000,
+       oneHourAverage: '76',
+       eightHourAverage: '62' },
+     { ozoneEndingTime: 1367451012000,
+       oneHourAverage: '77',
+       eightHourAverage: '66' },
+     { ozoneEndingTime: 1367454612000,
+       oneHourAverage: '68',
+       eightHourAverage: '68' },
+     { ozoneEndingTime: 1367458212000,
+       oneHourAverage: '57',
+       eightHourAverage: '68' },
+     { ozoneEndingTime: 1367461812000,
+       oneHourAverage:
+       ...
 ```
