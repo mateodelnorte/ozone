@@ -17,9 +17,7 @@ Instantiate an instance of Forecast. You'll need to provide options specifying y
 var ozone = new Ozone();
 ```
 
-Make a call to the API using the get or getAtTime methods. 
-
-  The get function calls to the https://api.forecast.io/forecast/APIKEY/LATITUDE,LONGITUDE endpoint. 
+Make a call to the API using the get method. 
 
 ```
 ozone.get(latitude, longitude, function (err, res, data) {
