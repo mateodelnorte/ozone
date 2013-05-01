@@ -9,11 +9,6 @@ Require forecast.io
 
 ```
 var Ozone = require('ozone');
-```
-
-Instantiate an instance of Forecast. You'll need to provide options specifying your forecast.io API Key. 
-
-```
 var ozone = new Ozone();
 ```
 
