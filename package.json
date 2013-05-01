@@ -1,6 +1,6 @@
 {
   "name": "ozone",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A library for scraping ozone / air quality data from http://airquality.weather.gov/probe_aq_data.php",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,12 @@
     "sinon": "*",
     "should": "*"
   },
-  "repository": "",
-  "author": "Matt Walters",
+  "repository": {
+    "url": "git@github.com:mateodelnorte/ozone.git"
+  },
+  "homepage": "https://github.com/mateodelnorte/ozone",
+  "author": {
+    "name": "Matt Walters"
+  },
   "license": "BSD"
 }
