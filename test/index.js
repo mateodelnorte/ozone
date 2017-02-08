@@ -4,7 +4,7 @@ var log = require('debug')('ozone'),
     sinon = require('sinon'),
     util = require('util');
 
-require('should');
+var should = require('should');
 
 var Ozone = require('../lib/index');
 
@@ -17,8 +17,6 @@ describe('ozone', function () {
     it('should return data for a latitude and longitude', function (done) {
       ozone.get(latitude, longitude, function (err, res, data) {
         if (err) throw err;
-        log('res: ' + util.inspect(res));
-        log('data: ' + util.inspect(data));
         res.should.not.equal.null;
         data.should.not.equal.null;
         data.data[0].should.have.property('ozoneEndingTime');

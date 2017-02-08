@@ -2,21 +2,20 @@
   "name": "ozone",
   "version": "0.0.1",
   "description": "A library for scraping ozone / air quality data from the US National Weather Service & NOAA",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "mocha -R spec"
   },
-  "main": "./lib/index.js",
   "dependencies": {
-    "debug": "0.7.2",
-    "jquery": "1.8.3",
-    "lodash": "1.1.1",
-    "request": "2.16.6"
+    "cheerio": "^0.22.0",
+    "debug": "^2.6.0",
+    "lodash": "^4.17.4",
+    "request": "^2.79.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "sinon": "*",
-    "should": "*"
+    "mocha": "^3.2.0",
+    "should": "^11.2.0",
+    "sinon": "^1.17.7"
   },
   "repository": {
     "url": "git@github.com:mateodelnorte/ozone.git"
